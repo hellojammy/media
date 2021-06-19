@@ -37,5 +37,11 @@
 本人写python不多，现学现用并没有对代码结构做过多考究，大家取之精华用即可。
 
 # 运行效果
-![运行效果](https://github.com/hellojammy/media/blob/main/run.png)
 
+    python do.py
+
+ <img src='https://github.com/hellojammy/media/blob/main/run.png' alt='运行效果' width=800> 
+ 
+ # 鸣谢
+ 
+本工程借鉴了部分网络上[现成的研究](https://cloud.tencent.com/developer/article/1583955)，不过此文章的方法已不可用，本人经过抓包研究后重新进行了改良。
