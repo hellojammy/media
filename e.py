@@ -36,6 +36,7 @@ def main():
     print("------ 3:抖音视频提取文字 ------")
     print("------ 4:mp4视频提取音频 --------")
     print("------ 5:mp4视频提取文字 --------")
+    print("------ 6:mp3音频提取文字 --------")
     print("---------------------------------")
     print("---------------------------------")
     print("------ 0:退出 -------------------")
@@ -50,18 +51,24 @@ def main():
             get_audio()
         elif(sel == "3"):
             get_dy_video()
+            get_audio()
             audio_recognise()            
         elif(sel == "4"):
             v_path = input("请输入视频的本地绝对地址（只支持mp4格式视频，如 /User/xx/Downloads/my.mp4)：")
             get_audio(v_path)
         elif(sel == "5"):
-            v_path = input("请输入视频的本地绝对地址（只支持mp4格式视频，如 /User/xx/Downloads/my.mp4)：") 
-            audio_recognise(v_path)
+            v_path = input("请输入视频的本地绝对地址（只支持mp4格式视频，如 /User/xx/Downloads/my.mp4)：")
+            get_audio(v_path)
+            audio_recognise()
+        elif(sel == "6"):
+            a_path = input("请输入音频的本地绝对地址（只支持mp3格式音频，如 /User/xx/Downloads/my.mp3)：") 
+            audio_recognise(a_path)    
         elif(sel == "0"):
             break
         else:
             print("无效选项")
 
+# 从视频中提取音频
 def get_audio(video_path= ""):
     if(video_path == ""):
         video_path = BASE_PATH + ".mp4"
@@ -72,7 +79,7 @@ def get_audio(video_path= ""):
     print("------ 🍺 从视频提取音频成功 ------\n")
 
 #识别视频文件中的语音识别
-def audio_recognise(video_path = ""):
+def audio_recognise(audio_path = ""):
     # if(video_path == ""):
     #     video_path = BASE_PATH + ".mp4"
 
@@ -81,10 +88,8 @@ def audio_recognise(video_path = ""):
     # print("------ 从视频提取音频开始 ------")
     # my_audio.write_audiofile(BASE_PATH + ".mp3")
     # print("------ 🍺 从视频提取音频成功 ------\n")
-    if(video_path == ""):
-        video_path = BASE_PATH + ".mp4"
 
-    get_audio(video_path)
+    # get_audio(video_path)
 
     print("------ 语音识别开始 ------")
     credential_var = credential.Credential(SECRET_ID, SECRET_KEY)
@@ -100,7 +105,9 @@ def audio_recognise(video_path = ""):
     req.set_word_info(0)
     req.set_convert_num_mode(1)
     # 音频路径
-    audio_path = BASE_PATH + ".mp3"
+    if(audio_path == ""):
+         audio_path = BASE_PATH + ".mp3"
+
     with open(audio_path, 'rb') as f:
         #读取音频数据
         data = f.read()
