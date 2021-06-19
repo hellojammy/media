@@ -34,6 +34,8 @@
 * do.py 支持功能较多，依赖腾讯云ASR
 * d.py 仅用于下载抖音无水印视频
 
+本人写python不多，现学现用并没有对代码结构做过多考究，大家取之精华用即可。
+
 # 运行效果
 ![运行效果](https://github.com/hellojammy/media/blob/main/run.png)
 
