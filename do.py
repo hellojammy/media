@@ -16,9 +16,9 @@ from asr import flash_recognizer
 
 
 #腾讯云API秘钥，假如不用语音转文字，可以不用配置
-APPID = "1251039353"
-SECRET_ID = "AKIDylIYXCahX6PRDhuqVszpNeeNp0uXtymJ"
-SECRET_KEY = "HH0RbU6QTFkyvb08zZsuf9LGu74k9G7g"
+APPID = ""
+SECRET_ID = ""
+SECRET_KEY = ""
 ENGINE_TYPE = "16k_zh"
 
 BASE_PATH = ""
