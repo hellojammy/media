@@ -42,6 +42,8 @@
 
  <img src='https://github.com/hellojammy/media/blob/main/run.png' alt='运行效果' width=800> 
  
+ * 抖音视频下载地址的获取方法：在视频播放页面，点击右下角分享按钮 → 复制链接，在复制的内容中找到类似于`https://v.douyin.com/eCAHg8o/`这样的地址，就是可用于下载的地址
+ 
  # 鸣谢
  
 本工程借鉴了部分网络上[现成的研究](https://cloud.tencent.com/developer/article/1583955)，不过此文章的方法已不可用，本人经过抓包研究后重新进行了改良。
