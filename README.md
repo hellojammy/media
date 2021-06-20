@@ -46,4 +46,4 @@
  
  # 鸣谢
  
-本工程借鉴了部分网络上[现成的研究](https://cloud.tencent.com/developer/article/1583955)，不过此文章的方法已不可用，本人经过抓包研究后重新进行了改良。
+本工程借鉴了网络上[研究成果](https://cloud.tencent.com/developer/article/1583955)，不过此文章的方法已不可用，本人经过抓包研究后重新进行了改良。
