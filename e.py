@@ -159,7 +159,8 @@ def get_dy_video_info(url):
     redirect_url = get_redirect_url(url)
     #获取视频id：6920107155437800719
     #https://www.iesdouyin.com/share/video/6920107155437800719/?region=CN&mid=6870791761040508930&u_code=mjmjiima&titleType=title&did=MS4wLjABAAAAHbiKEdYxtDwYiZyjoJ5oLtRHlfYV2sACf6DNknbysiw&iid=MS4wLjABAAAAi2PmpvzIFBJZPZ0B09KeS4w52_1SfvGSFRtMfGmWZXU&with_sec_did=1&timestamp=1623570095&app=aweme&utm_campaign=client_share&utm_medium=ios&tt_from=copy&utm_source=copy
-    pattern = re.compile('share/video/([a-z0-9]+)/')
+    #2021/06/25 抖音视频链接更换为这种格式https://www.douyin.com/video/6920107155437800719
+    pattern = re.compile('douyin.com/video/([a-z0-9]+)')  
     video_id = pattern.search(redirect_url).group(1)
 
     #获取视频元数据 https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids=6920107155437800719
